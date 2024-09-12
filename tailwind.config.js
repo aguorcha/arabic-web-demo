@@ -7,14 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        noto: {
-          sans: ['Noto Sans', 'sans-serif'],
-          arabic: ['Noto Sans Arabic', 'sans-serif'],
-        },
-        ibm: {
-          sans: ['IBM Plex Sans', 'sans-serif'],
-          arabic: ['IBM Plex Sans Arabic', 'sans-serif'],
-        },
+        'noto-sans': ['"Noto Sans"', 'sans-serif'],
+        'noto-sans-arabic': ['"Noto Sans Arabic"', 'sans-serif'],
+        'ibm-plex-sans': ['"IBM Plex Sans"', 'sans-serif'],
+        'ibm-plex-sans-arabic': ['"IBM Plex Sans Arabic"', 'sans-serif'],
       },
     },
   },

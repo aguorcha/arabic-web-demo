@@ -30,14 +30,19 @@ const longText1 = computed(() => isArabic.value ? texts.arabic.longText1 : texts
 const subtitle2 = computed(() => isArabic.value ? texts.arabic.subtitle2 : texts.spanish.subtitle2);
 const longText2 = computed(() => isArabic.value ? texts.arabic.longText2 : texts.spanish.longText2);
 
-
 const toggleLanguage = () => {
   isArabic.value = !isArabic.value;
 };
 
 const toggleFont = () => {
   selectedFont.value = selectedFont.value === 'noto' ? 'ibm' : 'noto';
-}
+};
+
+const fontClass = computed(() => {
+  return selectedFont.value === 'noto'
+    ? isArabic.value ? 'font-noto-sans-arabic' : 'font-noto-sans'
+    : isArabic.value ? 'font-ibm-plex-sans-arabic' : 'font-ibm-plex-sans';
+});
 </script>
 
 <template>
@@ -48,12 +53,11 @@ const toggleFont = () => {
       Cambiar a {{ isArabic ? 'Español' : 'Árabe' }}
     </button>
     <button @click="toggleFont" class="p-2 my-4 bg-green-800 text-white w-56 rounded-lg">
-      Cambiar fuente a {{ selectedFont === 'noto' ? 'IBM Plex' : 'noto' }}
+      Cambiar fuente a {{ selectedFont === 'noto' ? 'IBM Plex' : 'Noto' }}
     </button>
   </div>
 
-
-  <div :dir="isArabic ? 'rtl' : 'ltr'" :class="`font-${selectedFont}-${isArabic ? 'arabic' : 'sans'}`">
+  <div :dir="isArabic ? 'rtl' : 'ltr'" :class="fontClass">
     <h1 class="text-2xl mb-2">{{ title }}</h1>
     <p>{{ paragraph }}</p>
     <h2 class="text-xl mt-4 mb-2">{{ subtitle1 }}</h2>
