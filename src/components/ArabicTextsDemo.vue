@@ -60,10 +60,10 @@ const fontClass = computed(() => {
   <div :dir="isArabic ? 'rtl' : 'ltr'" :class="fontClass">
     <h1 class="text-2xl mb-2">{{ title }}</h1>
     <p>{{ paragraph }}</p>
-    <h2 class="text-xl mt-4 mb-2">{{ subtitle1 }}</h2>
-    <p>{{ longText1 }}</p>
-    <h2 class="text-xl mt-4 mb-2">{{ subtitle2 }}</h2>
-    <p>{{ longText2 }}</p>
+    <h2 class="text-xl mt-4 mb-2 font-bold">{{ subtitle1 }}</h2>
+    <p class="font-bold">{{ longText1 }}</p>
+    <h2 class="text-xl mt-4 mb-2 italic">{{ subtitle2 }}</h2>
+    <p class="italic">{{ longText2 }}</p>
   </div>
 
 </div>
