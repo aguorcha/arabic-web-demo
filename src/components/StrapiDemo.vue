@@ -88,7 +88,7 @@ const textDirection = computed(() => {
 </script>
 
 <template>
-<div class="bg-green-100 mt-10 mx-auto w-5/6 rounded-lg flex flex-col p-4">
+<div class="bg-green-100 my-10 mx-auto w-5/6 rounded-lg flex flex-col p-4">
   
   <div class="flex justify-between">
     <select v-model="selectedLanguage" class="p-2 my-4 bg-green-800 text-white w-52 rounded-lg">

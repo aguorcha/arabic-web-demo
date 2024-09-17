@@ -4,7 +4,7 @@ import StrapiDemo from './components/StrapiDemo.vue';
 </script>
 
 <template>
-  <!-- <ArabicTextsDemo/> -->
+  <ArabicTextsDemo/>
   <StrapiDemo/>
 </template>
 
